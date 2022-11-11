@@ -1,5 +1,11 @@
 import React from 'react';
-import {Image, View, StatusBar} from 'react-native';
+import {
+  Image,
+  View,
+  StatusBar,
+  KeyboardAvoidingView,
+  Platform,
+} from 'react-native';
 import Button from '../components/Button';
 import Input from '../components/TextInput';
 import WelcomeText from '../components/WelcomeText';
@@ -17,16 +23,21 @@ const Register = () => {
         barStyle="dark-content"
       />
       <Image style={styles.elipse} source={require('../assets/elipse.png')} />
-      <WelcomeText welcome="Welcome Onboard!" />
-      <SecondaryText secondaryText="Let's help you meet with your task" />
-      <View style={styles.inputGroup}>
+      <View style={{alignItems: 'center', marginTop: 180}}>
+        <WelcomeText welcome="Welcome Onboard!" />
+        <SecondaryText secondaryText="Let's help you meet with your task" />
+      </View>
+      <KeyboardAvoidingView
+        behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
+        style={styles.inputGroup}>
         <Input input="Enter your full name" />
         <Input input="Enter your email" />
         <Input input="Enter your password" />
         <Input input="Confirm password" />
-      </View>
+      </KeyboardAvoidingView>
+
       <Button label="Register" />
-      <LoginText />
+      <LoginText text="Do you alredy have an Account?" log="Sign In" />
     </View>
   );
 };

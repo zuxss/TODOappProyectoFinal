@@ -3,7 +3,13 @@ import {TextInput} from 'react-native';
 
 const styles = require('../styles/styles');
 function Input(text) {
-  return <TextInput placeholder={text.input} style={styles.input} />;
+  return (
+    <TextInput
+      placeholder={text.input}
+      style={styles.input}
+      placeholderTextColor="grey"
+    />
+  );
 }
 
 export default Input;

@@ -3,11 +3,10 @@ import {StyleSheet} from 'react-native';
 module.exports = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    margin: 'auto',
     alignItems: 'center',
+
     backgroundColor: '#EDEDEE',
-    width: '100%',
-    height: '100%',
   },
   button: {
     backgroundColor: '#50C2C9',
@@ -16,7 +15,6 @@ module.exports = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 20,
   },
 
   buttonLabel: {
@@ -36,11 +34,15 @@ module.exports = StyleSheet.create({
     color: 'grey',
     fontSize: 15,
     fontWeight: 'bold',
-    marginBottom: 15,
+    marginBottom: 75,
+    textAlign: 'center',
   },
 
   loginText: {
     color: '#50C2C9',
+    marginTop: 10,
+    fontSize: 15,
+    fontWeight: 'bold',
   },
 
   elipse: {
@@ -57,10 +59,18 @@ module.exports = StyleSheet.create({
     color: 'black',
     fontSize: 15,
     fontWeight: 'bold',
+    width: '90%',
   },
   inputGroup: {
-    width: '85%',
+    width: '90%',
     marginBottom: 65,
-    marginTop: 65,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+
+  imgTittle: {
+    width: 200,
+    height: 200,
+    marginBottom: 30,
   },
 });
