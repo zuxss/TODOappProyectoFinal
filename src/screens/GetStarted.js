@@ -21,7 +21,6 @@ const GetStarted = () => {
       />
       <View style={{alignItems: 'center', marginTop: 20}}>
         <WelcomeText welcome="Gets Thing done with TODo" />
-
         <SecondaryText secondaryText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  " />
       </View>
       <View
@@ -31,7 +30,7 @@ const GetStarted = () => {
           width: '100%',
           alignItems: 'center',
         }}>
-        <Button label="Get Started" />
+        <Button label="Get Started" screenName={'Login'} />
       </View>
     </View>
   );

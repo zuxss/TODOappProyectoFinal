@@ -1,11 +1,13 @@
 import React from 'react';
 
-import Register from './src/screens/Register';
-import Login from './src/screens/Login';
-import GetStarted from './src/screens/GetStarted';
-
+import {NavigationContainer} from '@react-navigation/native';
+import {MainStackNavigator} from './src/navigation/MainNavigation';
 const App = () => {
-  return <Register></Register>;
+  return (
+    <NavigationContainer>
+      <MainStackNavigator />
+    </NavigationContainer>
+  );
 };
 
 export default App;
