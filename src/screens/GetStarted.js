@@ -4,8 +4,11 @@ import Button from '../components/Button';
 import WelcomeText from '../components/WelcomeText';
 import SecondaryText from '../components/SecondaryText';
 const styles = require('../styles/styles');
+import t from '../utils/translate';
+import {useNavigation} from '@react-navigation/native';
 
 const GetStarted = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <StatusBar
@@ -20,8 +23,8 @@ const GetStarted = () => {
         source={require('../assets/onboarding.png')}
       />
       <View style={{alignItems: 'center', marginTop: 20}}>
-        <WelcomeText welcome="Gets Thing done with TODo" />
-        <SecondaryText secondaryText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  " />
+        <WelcomeText welcome={t('getStarted.welcomeText')} />
+        <SecondaryText secondaryText={t('getStarted.secondaryText')} />
       </View>
       <View
         style={{
@@ -30,7 +33,13 @@ const GetStarted = () => {
           width: '100%',
           alignItems: 'center',
         }}>
-        <Button label="Get Started" screenName={'Login'} />
+        <Button
+          label={t('getStarted.button')}
+          screenName={'Login'}
+          onPress={() => {
+            navigation.navigate('Login');
+          }}
+        />
       </View>
     </View>
   );

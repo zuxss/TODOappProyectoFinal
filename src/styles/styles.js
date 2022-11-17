@@ -2,10 +2,9 @@ import {StyleSheet} from 'react-native';
 
 module.exports = StyleSheet.create({
   container: {
-    flex: 1,
     margin: 'auto',
     alignItems: 'center',
-
+    width: '100%',
     backgroundColor: '#EDEDEE',
   },
   button: {
@@ -49,6 +48,7 @@ module.exports = StyleSheet.create({
     position: 'absolute',
     top: -105,
     left: -125,
+    zIndex: 1,
   },
   input: {
     backgroundColor: 'white',
@@ -72,5 +72,42 @@ module.exports = StyleSheet.create({
     width: 200,
     height: 200,
     marginBottom: 30,
+  },
+
+  userCard: {
+    backgroundColor: '#50C2C9',
+    width: '100%',
+    height: 250,
+    alignItems: 'center',
+    padding: 100,
+  },
+  userImg: {
+    width: 50,
+    height: 50,
+    marginBottom: 20,
+  },
+
+  taskListContainer: {
+    backgroundColor: 'white',
+    paddingHorizontal: 25,
+    paddingVertical: 15,
+    elevation: 8,
+    borderRadius: 20,
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.5,
+    shadowRadius: 2,
+    marginBottom: 20,
+    width: '85%',
+  },
+  taskListTitleContainer: {
+    alignItems: 'center',
+    marginBottom: 25,
+  },
+
+  task: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 15,
   },
 });
